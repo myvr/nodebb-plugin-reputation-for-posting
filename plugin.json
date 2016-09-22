@@ -1,0 +1,23 @@
+{
+    "id": "nodebb-plugin-reputation-for-posting",
+    "name": "Reputation for Posting",
+    "description": "Give a user reputation every time they post",
+    "url": "https://github.com/myvr/nodebb-plugin-reputation-for-posting",
+    "library": "./library.js",
+    "hooks": [
+        {
+            "hook": "static:app.load",
+            "method": "init"
+        },
+        {
+            "hook": "action:post.save",
+            "method": "awardReputation"
+        },
+        {
+            "hook": "filter:admin.header.build",
+            "method": "addAdminNavigation"
+        }
+    ],
+    "templates": "static/templates",
+    "compatibility": "^1.1.2"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nodebb-plugin-reputation-for-posting",
+  "version": "1.0.0",
+  "description": "Give a user reputation every time they post",
+  "main": "library.js",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/myvr/nodebb-plugin-reputation-for-posting"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "reputation",
+    "award",
+    "post",
+    "give"
+  ],
+  "author": "Danny Eiden",
+  "license": "ASL 2.0",
+  "nbbpm": {
+      "compatibility": "^1.1.2"
+  }
+}
