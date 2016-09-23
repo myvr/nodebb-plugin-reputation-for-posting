@@ -32,7 +32,7 @@
                 user.incrementUserFieldBy(
                     postData.uid,
                     'reputation',
-                    settings.reputationAwardAmount,
+                    parseInt(settings.reputationAwardAmount, 10),
                     next
                 );
             },
@@ -42,9 +42,13 @@
             function(next) {
                 rewards.checkConditionAndRewardUser(postData.uid, 'essentials/user.reputation', function(callback) {
                     user.getUserField(postData.uid, 'reputation', callback);
-                });
+                }, next);
             }
-        ]);
+        ], function(err) {
+            if (err) {
+                winston.error(err);
+            }
+        });
     };
 
     plugin.addAdminNavigation = function(header, callback) {
