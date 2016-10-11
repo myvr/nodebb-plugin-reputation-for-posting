@@ -20,7 +20,7 @@
     };
 
     function renderAdmin(req, res, next) {
-        res.render('admin', {});
+        res.render('reputation-for-posting-admin', {});
     }
 
     plugin.awardReputation = function(postData) {

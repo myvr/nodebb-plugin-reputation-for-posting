@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-reputation-for-posting",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Give a user reputation every time they post",
   "main": "library.js",
   "repository": {
