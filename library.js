@@ -24,6 +24,7 @@
     }
 
     plugin.awardReputation = function(postData) {
+        postData = postData.post ? postData.post : postData;
         async.waterfall([
             function(next){
                 meta.settings.get('reputation-for-posting', next);
