@@ -1,11 +1,11 @@
 (function(module) {
     "use strict";
 
-    var async = module.parent.require('async'),
-        db = module.parent.require('./database'),
-        meta = module.parent.require('./meta'),
-        user = module.parent.require('./user'),
-        rewards = module.parent.require('./rewards');
+    var async = require.main.require('async'),
+        db = require.main.require('./src/database'),
+        meta = require.main.require('./src/meta'),
+        user = require.main.require('./src/user'),
+        rewards = require.main.require('./src/rewards');
 
     var plugin = {};
 
